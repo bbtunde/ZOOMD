@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whiteTextColor"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/viewpage"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonPanel"
+        android:orientation="horizontal"
+        android:paddingTop="2sp"
+        android:paddingBottom="2sp"
+        android:paddingLeft="3sp"
+        android:paddingRight="3sp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="PickUp"
+            android:text="Pick Up"
+            android:id="@+id/pick_up_button"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="Deliver"
+            android:id="@+id/deliver_button"
+            android:text="Deliver"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="CancelItem"
+            android:id="@+id/cancel_button"
+            android:text="Cancel"
+            />
+    </LinearLayout>
+
+    <View
+        android:background="#e0e0e0"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/buttonPanel"
+        android:id="@+id/buttonPanelUnderline"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACCEPT THIS ITEM "
+        android:layout_below="@id/buttonPanelUnderline"
+        android:id="@+id/accept_button"
+        android:onClick="Accept"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/itemListView"
+        android:layout_below="@id/accept_button"
+        android:clickable="false"
+         />
+
+    </RelativeLayout>
+    <!--
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="horizontal"
+       android:gravity="right|bottom"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/viewpage"
+       >
+
+   <ImageView
+       android:id="@+id/imageProfile"
+       android:layout_width="70dp"
+       android:layout_height="70dp"
+       android:layout_marginTop="150dp"
+       android:src="@drawable/write_status" />
+   </LinearLayout>
+   -->
+</FrameLayout>
+

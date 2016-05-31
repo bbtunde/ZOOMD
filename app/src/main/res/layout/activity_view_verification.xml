@@ -1,0 +1,58 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.overdrivedx.zoomd.ViewVerificationActivity"
+    android:background="@color/whiteTextColor"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonPanel"
+        android:orientation="horizontal"
+        android:paddingTop="2sp"
+        android:paddingBottom="2sp"
+        android:paddingLeft="3sp"
+        android:paddingRight="3sp"
+        android:gravity="center"
+        >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="Verified"
+            android:text="Verified"
+            android:id="@+id/verified_button"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:background="#e0e0e0"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/buttonPanel"
+        android:id="@+id/buttonPanelUnderline"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ACCEPT TO VERIFY "
+        android:layout_below="@id/buttonPanelUnderline"
+        android:id="@+id/accept_verification_button"
+        android:onClick="AcceptVerification"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/verifyItemListView"
+        android:layout_below="@id/accept_verification_button"
+        android:clickable="false"
+        />
+
+</RelativeLayout>
